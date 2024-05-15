@@ -5,6 +5,13 @@
           <div formGroupName="userData">
             
           <div class="form-group">
+            <label for="orgname">Organization</label>
+            <select class="custom-select" formControlName="orgname">
+              <option value="">Select Organization</option>
+              <option *ngFor="let organization of organization" [ngValue]="organization">{{organization}}</option>
+            </select>
+          </div>  
+          <div class="form-group">
             <label for="username">Username</label>
             <input
               type="text"
