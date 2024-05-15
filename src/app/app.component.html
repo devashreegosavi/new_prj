@@ -1,0 +1,16 @@
+<div class="container">
+  <nav>
+    <button type="button" class="btn btn-primary" 
+    routerLink="/app-home"
+    routerLinkActive="activebutton">home component</button>
+
+    <!--<button type="button" class="btn btn-primary" 
+    routerLink="/app-login"
+    routerLinkActive="activebutton">login component routerlink</button>-->
+
+    <button type="button" class="btn btn-primary" 
+    (click)="navigateToAbout()">login component navigate</button>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>
