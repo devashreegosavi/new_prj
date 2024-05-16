@@ -1,18 +1,23 @@
 <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="text-center">
+                <h1> Login </h1>
+            </div>
         <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
           <div formGroupName="userData">
             
-          <div class="form-group">
+          <div class="mb-3">
             <label for="orgname">Organization</label>
             <select class="custom-select" formControlName="orgname">
               <option value="">Select Organization</option>
               <option *ngFor="let organization of organization" [ngValue]="organization">{{organization}}</option>
             </select>
           </div>  
-          <div class="form-group">
-            <label for="username">Username</label>
+          <div class="mb-3">
+            <label for="username">User Name</label>
             <!--<span class="input-group-text" id="basic-addon1">!=</span>-->
             <input
               type="text"
@@ -27,8 +32,8 @@
               </span>-->
             </span>
           </div>
-          <div class="form-group">
-            <label for="password">password</label>
+          <div class="mb-3">
+            <label for="password">Password</label>
             <input
               type="text"
               id="password"
@@ -44,6 +49,8 @@
         class="help-block">Please enter valid data!</span>
       <button class="btn btn-primary" type="submit">Submit</button>
     </form>
+    </div>
+    </div>
 </div>
 </div>
 </div>

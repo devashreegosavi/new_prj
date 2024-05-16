@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -21,8 +22,12 @@ export class LoginComponent implements OnInit{
       
     }
 
+    constructor(private router : Router){
+
+    }
     onSubmit(){
       console.log(this.loginform.value);
       this.loginform.reset();
+      this.router.navigate(['/home']);
     }
 }
